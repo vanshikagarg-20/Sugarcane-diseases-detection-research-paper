@@ -1,0 +1,9 @@
+image_size: 224
+batch_size: 32
+epochs: 30
+learning_rate: 0.001
+
+paths:
+  train_dir: dataset/train
+  val_dir: dataset/val
+  model_output: outputs/models/
