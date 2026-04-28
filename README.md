@@ -1,26 +1,91 @@
 <a id="top"></a>
-![banner](Report&PPT/banner.png)
 
-This project implements an AI-based system for detecting sugarcane leaf diseases using deep learning and image processing techniques. It is inspired by a research approach combining CNNs, data augmentation, and feature extraction.
+<h1 align="center">🌿 Sugarcane Leaf Disease Detection</h1>
+<h3 align="center">AI-Based Disease Detection using Deep Learning & Image Processing</h3>
 
----
+<p align="center">
+  <img src="Report&PPT/banner.png" width="80%" alt="Banner"/>
+</p>
 
-## Features
+<hr>
 
-* CNN-based disease classification
-* Data augmentation for better generalization
-* Evaluation using Precision, Recall, and F1-score
-* Confusion Matrix visualization
-* Training & validation accuracy/loss plots
-* Modular and scalable code structure
+<h2>📌 Table of Contents</h2>
+<ul>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#problem">Problem Statement</a></li>
+  <li><a href="#objectives">Objectives</a></li>
+  <li><a href="#methodology">Methodology</a></li>
+  <li><a href="#features">Features</a></li>
+  <li><a href="#dataset">Dataset</a></li>
+  <li><a href="#architecture">Model Architecture</a></li>
+  <li><a href="#results">Results</a></li>
+  <li><a href="#run">How to Run</a></li>
+  <li><a href="#structure">Project Structure</a></li>
+  <li><a href="#future">Future Improvements</a></li>
+  <li><a href="#team">Team Details</a></li>
+  <li><a href="#abstract">Research Abstract</a></li>
+</ul>
 
----
+<hr>
 
-## Dataset Structure
+<h2 id="introduction">📖 Introduction</h2>
+<p>
+Sugarcane productivity is affected by diseases like rust, red rot, smut, and yellow leaf disease.
+Manual detection is slow, error-prone, and not scalable.
+</p>
 
-Organize your dataset like this:
+<p>
+This project introduces an <b>AI-powered system</b> using <b>CNNs</b> for accurate disease detection.
+</p>
 
-```
+<hr>
+
+<h2 id="problem">❗ Problem Statement</h2>
+<ul>
+  <li>Manual detection is slow and inaccurate</li>
+  <li>Farmers lack automated tools</li>
+  <li>Late detection causes crop loss</li>
+  <li>Environmental variations affect accuracy</li>
+</ul>
+
+<p><b>Goal:</b> Build an automated, scalable detection system</p>
+
+<hr>
+
+<h2 id="objectives">🎯 Objectives</h2>
+<ul>
+  <li>Develop CNN-based model</li>
+  <li>Enable early detection</li>
+  <li>Improve real-world accuracy</li>
+  <li>Use data augmentation</li>
+  <li>Evaluate with Precision, Recall, F1-score</li>
+</ul>
+
+<hr>
+
+<h2 id="methodology">🧠 Methodology</h2>
+<ol>
+  <li><b>Data Collection:</b> Annotated dataset</li>
+  <li><b>Preprocessing:</b> Noise removal, segmentation</li>
+  <li><b>Training:</b> CNN + augmentation</li>
+  <li><b>Evaluation:</b> Accuracy, Precision, Recall</li>
+</ol>
+
+<hr>
+
+<h2 id="features">✨ Features</h2>
+<ul>
+  <li>✔ CNN-based classification</li>
+  <li>✔ Data augmentation</li>
+  <li>✔ Confusion matrix</li>
+  <li>✔ Accuracy & loss graphs</li>
+</ul>
+
+<hr>
+
+<h2 id="dataset">📂 Dataset</h2>
+
+<pre>
 dataset/
   train/
     healthy/
@@ -32,84 +97,123 @@ dataset/
     rust/
     red_rot/
     yellow/
-```
+</pre>
 
-Each folder should contain corresponding images.
+<hr>
 
----
+<h2 id="architecture">🏗️ Model Architecture</h2>
+<ul>
+  <li>3 Convolution Layers + MaxPooling</li>
+  <li>Dense Layers</li>
+  <li>Dropout</li>
+  <li>Softmax Output</li>
+</ul>
 
-## Model Architecture
+<hr>
 
-* Convolutional Neural Network (CNN)
-* 3 Convolution layers + MaxPooling
-* Fully connected Dense layers
-* Dropout for overfitting prevention
-* Softmax output layer for classification
+<h2 id="results">📊 Results</h2>
+<ul>
+  <li>Training Accuracy: ~99%</li>
+  <li>Validation Accuracy: ~93%</li>
+  <li>Balanced Precision, Recall, F1-score</li>
+</ul>
 
----
+<hr>
 
-## Results
+<h2 id="run">▶️ How to Run</h2>
 
-* Training Accuracy: ~99%
-* Validation Accuracy: ~93%
-* Balanced Precision, Recall, and F1-score across classes
-
----
-
-## ▶Run Training
-
-```
+<pre>
+pip install -r requirements.txt
 python src/train.py
-```
+python src/evaluate.py
+</pre>
 
----
+<hr>
 
-## Outputs
+<h2 id="structure">📁 Project Structure</h2>
 
-After training, the model generates:
-
-* Accuracy vs Validation Accuracy graph
-* Loss vs Validation Loss graph
-* Confusion Matrix
-* Classification Report (Precision, Recall, F1-score)
-* Saved trained model (`.h5`)
-
----
-
-## Project Structure
-
-```
+<pre>
 sugarcane-disease-detection/
 │
 ├── dataset/
-├── notebooks/
-│   └── sugarcane_disease_detection.ipynb
-├── src/
-│   ├── train.py
-│   ├── evaluate.py
-│   ├── model.py
-├── outputs/
-│   ├── models/
-│   ├── plots/
-│   └── reports/
-├── requirements.txt
+├── Source Code/
+│   ├── src/
+│   ├── outputs/
+├── documentation/
+│   └── abstract.pdf
 ├── README.md
-├── .gitignore
-├── config.yaml
+</pre>
 
----
+<hr>
 
-##  Future Improvements
+<h2 id="future">🚀 Future Improvements</h2>
+<ul>
+  <li>Use ResNet / EfficientNet</li>
+  <li>Add spectral imaging</li>
+  <li>Deploy with Streamlit</li>
+  <li>Mobile integration</li>
+</ul>
 
-* Use advanced architectures like ResNet or EfficientNet
-* Add spectral imaging support
-* Deploy using Streamlit or Flask
-* Optimize for mobile deployment
+<hr>
 
----
+<h2 id="team">👨‍👩‍👧‍👦 Team Details</h2>
 
-## Author
+<table border="1" cellpadding="8">
+<tr>
+<th>Name</th>
+<th>Program</th>
+<th>University</th>
+<th>Email</th>
+</tr>
 
-Vanshika Garg
+<tr>
+<td>Yash Goyal</td>
+<td>B.E (CSE)</td>
+<td>Chitkara University</td>
+<td>yash2555.be22@chitkara.edu.in</td>
+</tr>
 
-----
+<tr>
+<td>Himanshi</td>
+<td>B.E (CSE)</td>
+<td>Chitkara University</td>
+<td>himanshi1656.be22@chitkara.edu.in</td>
+</tr>
+
+<tr>
+<td>Vanshika Garg</td>
+<td>B.E (CSE)</td>
+<td>Chitkara University</td>
+<td>vanshika2507.be22@chitkara.edu.in</td>
+</tr>
+
+<tr>
+<td>Shreyas Sharma</td>
+<td>B.E (CSE)</td>
+<td>Chitkara University</td>
+<td>shreyas2346.be22@chitkara.edu.in</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2 id="abstract">📄 Research Abstract</h2>
+
+<p>
+📎 <b>View Full Abstract:</b><br>
+<a href="Report&PPT/Abstract.docx">Open Abstract Document</a>
+</p>
+
+<p><b>Summary:</b></p>
+<ul>
+  <li>AI-based sugarcane disease detection</li>
+  <li>CNN + Image Processing</li>
+  <li>High accuracy & scalable system</li>
+</ul>
+
+<hr>
+
+<p align="center">
+  <a href="#top">⬆ Back to Top</a>
+</p>
